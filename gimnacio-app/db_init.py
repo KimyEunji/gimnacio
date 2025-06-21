@@ -21,10 +21,10 @@ CREATE TABLE iF NOT EXISTS socios(
    );
 
 CREATE TABLE IF NOT EXISTS membresias(
-   id SERIAL PRIMARY KEY
+   id SERIAL PRIMARY KEY,
    nombre VARCHAR(100) NOT NULL,
-   preicio VARCHAR(10,2) NOT NULL
-   )  
+   preicio NUMERIC(10,2) NOT NULL
+   );  
 
 CREATE TABLE iF NOT EXISTS entrenadores(
    id SERIAL PRIMARY KEY,
@@ -37,11 +37,11 @@ CREATE TABLE iF NOT EXISTS entrenadores(
 def iniciar_db():
     try:
         conn = psq.connect(
-            dbname = DB_NAME,
-            user = DB_USER,
-            passwird = DB_PASSWORD,
-            host = DB_HOST,
-            port = DB_PORT
+            dbname = DB_CONFIG['dbname'],
+            user = DB_CONFIG['user'],
+            password = DB_CONFIG['password'],
+            host = DB_CONFIG['host'],
+            port = DB_CONFIG['port']
         )
         cursor = conn.cursor()
         cursor.execute(sql_schema)
@@ -49,3 +49,5 @@ def iniciar_db():
         print("tabla crada con exito :P")
     except Exception as e:
         print("Error ocurrido: ", e)
+
+iniciar_db()

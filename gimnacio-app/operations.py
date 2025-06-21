@@ -1,18 +1,19 @@
 import psycopg2 as psq
-DB_NAME = "gimansio"
-DB_USER = "postg 2res"
-DB_PASSWORD = "mNvXvAjspZcMFjYzBFQQelUyYcbRtJIv"
-DB_HOST = "postgres-1048ec55.railway.internal"
-DB_PORT = "5432"
+DB_CONFIG = {
+    "dbname": "gimnacio",
+    "user": "postgres",
+    "password": "42001217",
+    "host": "localhost",
+    "port": "5432"
+}
 
 conn = psq.connect(
-     dbname = DB_NAME,
-     user = DB_USER,
-     passwird = DB_PASSWORD,
-     host = DB_HOST,  
-     port = DB_PORT
-        )
-
+    dbname = DB_CONFIG['dbname'],
+    user = DB_CONFIG['user'],
+    password = DB_CONFIG['password'],
+    host = DB_CONFIG['host'],
+    port = DB_CONFIG['port']
+)
 cursor = conn.cursor()
 
 """data = {
