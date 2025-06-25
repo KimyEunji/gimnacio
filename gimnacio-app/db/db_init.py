@@ -1,13 +1,4 @@
-import psycopg2 as psq
-
-# Configuración de la base de datos
-DB_CONFIG = {
-    "dbname": "gimnacio",
-    "user": "postgres",
-    "password": "42001217",
-    "host": "localhost",
-    "port": "5432"
-}
+import db.db import conn
 
 #Para que no esten vacios se utiliza el NOT NULL
 #Varchar es para guardar taxto
@@ -36,13 +27,6 @@ CREATE TABLE iF NOT EXISTS entrenadores(
 
 def iniciar_db():
     try:
-        conn = psq.connect(
-            dbname = DB_CONFIG['dbname'],
-            user = DB_CONFIG['user'],
-            password = DB_CONFIG['password'],
-            host = DB_CONFIG['host'],
-            port = DB_CONFIG['port']
-        )
         cursor = conn.cursor()
         cursor.execute(sql_schema)
         conn.commit()

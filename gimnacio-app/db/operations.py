@@ -1,19 +1,5 @@
-import psycopg2 as psq
-DB_CONFIG = {
-    "dbname": "gimnacio",
-    "user": "postgres",
-    "password": "42001217",
-    "host": "localhost",
-    "port": "5432"
-}
+from .db import conn
 
-conn = psq.connect(
-    dbname = DB_CONFIG['dbname'],
-    user = DB_CONFIG['user'],
-    password = DB_CONFIG['password'],
-    host = DB_CONFIG['host'],
-    port = DB_CONFIG['port']
-)
 cursor = conn.cursor()
 
 """data = {
@@ -22,6 +8,7 @@ cursor = conn.cursor()
     "password"="Juan",
     "estado" ="Juan"
 }"""
+
 # la dunción recibe un diccionario y devuelve una tupla
 # La tupla tiene 2 parametros, el primero el estado y el segundo el mensaje
         

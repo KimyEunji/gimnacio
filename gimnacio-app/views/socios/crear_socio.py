@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox as mb
 from views.resources import PRIMARY_COLOR, SECONDARY_COLOR, THIRD_COLOR, TITLES, TEXTS
-from operations import crear_socio
+from db.operations import crear_socio
 
 def mostrar_crear_socio(ventana:tk.Tk):
     # Borrar lo que habia antes 
@@ -35,9 +35,10 @@ def mostrar_crear_socio(ventana:tk.Tk):
     # Guardar Socio
     def enviar():
         data = {}
-        data["name"] = entry_name.get()
-        data["email"] = entry_email.get()
+        data["nombre"] = entry_name.get()
+        data["correo"] = entry_email.get()
         data["password"] = entry_password.get()
+        data["estado"] = "activo"
         status, msg = crear_socio(data)
         if not status:
             mb.showerror("Ocurrio un Error", msg)
