@@ -12,4 +12,4 @@ TITLES = ("Century", 20)
 SUBTITLES = ("Century", 15)
 TEXTS = ("Century", 10)
 
-ICON = "C:/Users/almaz/OneDrive/Desktop/Programacion/gimnacio-app/views/evee.ico"
+ICON = "C:/Users/almaz/OneDrive/Documentos/gimnacio/gimnacio-app/views/evee.ico"

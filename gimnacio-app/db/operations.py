@@ -1,4 +1,4 @@
-from .db import conn
+from db.db import conn
 
 cursor = conn.cursor()
 

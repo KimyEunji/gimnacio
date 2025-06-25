@@ -1,4 +1,4 @@
-import db.db import conn
+from db.db import conn
 
 #Para que no esten vacios se utiliza el NOT NULL
 #Varchar es para guardar taxto
