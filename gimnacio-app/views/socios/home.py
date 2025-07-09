@@ -21,9 +21,11 @@ def mostrar_home_socios(w:tk.Tk):
 
     # Menu de navegacion
     buttons_labels = ["Socios", "Membresias", "Entrenadores"]
-    for indice, buttons_label in enumerate(buttons_labels):
+    for indice, buttons_label in enumerate(buttons_labels, 2):
         tk.Button(text=buttons_label, font=TITLES, bg=THIRD_COLOR, fg=SECONDARY_COLOR, relief="groove"). grid(column=indice, row=1, sticky="we")
-    # SUBTITULO y crear nuevo cliente 
-    # TABLA para mostrar socios 
+   
+   # Sutitulo y crear nuevo socio 
+    tk.Label(text="Socios", font=TITLES, bg=PRIMARY_COLOR, fg=SECONDARY_COLOR).grid(column=0, row=2, sticky="n", columnspan=7)
+    tk.Button(text="Crear Socio", font=TEXTS, bg=THIRD_COLOR, fg=SECONDARY_COLOR, command=lambda:mostrar_crear_socio(w), relief="groove").grid(column=4, row=2)
 
     w.mainloop()
