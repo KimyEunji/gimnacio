@@ -14,7 +14,7 @@ def mostrar_home_socios(w:tk.Tk):
 
     # Logo
     image_pil = Image.open(LOGO)
-    resized_image = image_pil.resize((200,200))
+    resized_image = image_pil.resize((100,100))
     photo = ImageTk.PhotoImage(image_pil)
     w.photo = photo
     tk.Label(image=photo).grid(row=0, column=0, columnspan=7, sticky="n")
