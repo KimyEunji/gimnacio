@@ -1,6 +1,6 @@
 from db.db_init import iniciar_db
 from views.main import ventana
-from views.socios.crear_socio import mostrar_crear_socio
+from views.socios.home import mostrar_home_socios
 
 iniciar_db()
-mostrar_crear_socio(ventana)
+mostrar_home_socios(ventana)
