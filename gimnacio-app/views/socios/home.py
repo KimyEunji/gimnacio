@@ -22,7 +22,7 @@ def mostrar_home_socios(w:tk.Tk):
     # Menu de navegacion
     buttons_labels = ["Socios", "Membresias", "Entrenadores"]
     for indice, buttons_label in enumerate(buttons_labels):
-        tk.Button(text=buttons_label, font=TITLES, bg=PRIMARY_COLOR, fg=SECONDARY_COLOR, relief="groove"). grid(column=indice, row=1, sticky="we")
+        tk.Button(text=buttons_label, font=TITLES, bg=THIRD_COLOR, fg=SECONDARY_COLOR, relief="groove"). grid(column=indice, row=1, sticky="we")
     # SUBTITULO y crear nuevo cliente 
     # TABLA para mostrar socios 
 
